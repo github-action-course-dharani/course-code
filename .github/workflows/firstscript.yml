@@ -1,0 +1,16 @@
+name: First Workflow
+on: "push"
+
+jobs:
+    run-shell-command:
+        runs-on: ubuntu-latest
+        steps:
+            - name: echo a string
+              run: echo "Hello Word"
+            - name: Multiline command
+              run: |
+                echo "Dharani"
+                npm install
+
+
+
