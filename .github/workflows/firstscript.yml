@@ -11,6 +11,6 @@ jobs:
               run: |
                 echo "Dharani"
                 npm -v
-
+# The above one was to run a single job the below is to run the job simultaniously
 
 
