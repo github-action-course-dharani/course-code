@@ -10,7 +10,7 @@ jobs:
             - name: Multiline command
               run: |
                 echo "Dharani"
-                npm install
+                npm -v
 
 
 
