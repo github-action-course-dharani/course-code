@@ -13,4 +13,18 @@ jobs:
                 npm -v
 # The above one was to run a single job the below is to run the job simultaniously
 
+  parallel-job-macos:
+    runs-on: macos-latest
+    steps:
+      - name: View
+        run: sw_vers
 
+# Another job
+  
+  dependent-job:
+    runs-on: window-latest
+    needs: run-shell-command   # this is needed because needs imply that it is dependent and it should be executed after need is executed i,e is run-shell-command is job id
+    steps:
+      - name: echo a string
+        run: Write-Output "Happy learning"
+        
