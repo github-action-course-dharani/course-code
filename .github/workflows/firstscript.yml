@@ -24,4 +24,4 @@ jobs:
     needs: run-shell-command   # this is needed because needs imply that it is dependent and it should be executed after need is executed i,e is run-shell-command is job id
     steps:
       - name: echo a string
-        run: Write-Output "Happy learning"
+        run: Write-Output "Happy learning....."
