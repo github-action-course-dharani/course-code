@@ -20,7 +20,7 @@ jobs:
       - name: View
         run: sw_vers 
   dependent-job:
-    runs-on: window-latest
+    runs-on: windows-latest
     needs: run-shell-command   # this is needed because needs imply that it is dependent and it should be executed after need is executed i,e is run-shell-command is job id
     steps:
       - name: echo a string
