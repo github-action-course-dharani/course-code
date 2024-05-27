@@ -1,5 +1,5 @@
 name: First Workflow
-on: "push"
+on: "push"  # It may be list or string [ push ]
 
 jobs:
   run-shell-command:
