@@ -15,6 +15,7 @@ jobs:
 
     Window-command-execution-w:
         runs-on: windows-latest
+        needs: Shell-command-execution
         steps:
             - name: Executing
               run: |
