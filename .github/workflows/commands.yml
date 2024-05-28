@@ -14,12 +14,12 @@ jobs:
                 echo  $GITHUB_REPOSITORY
 
     Window-command-execution-w:
-        runs-on: ubuntu-latest
+        runs-on: windows-latest
         steps:
             - name: Executing
               run: |
-                pwd
-                ls -a
-                echo  $GITHUB_SHA
-                echo  $GITHUB_WORKSPACE
-                echo  $GITHUB_REPOSITORY
+                Get-Location
+                dir
+                echo  $env:GITHUB_SHA
+                echo  $env:GITHUB_WORKSPACE
+                echo  $env:GITHUB_REPOSITORY
