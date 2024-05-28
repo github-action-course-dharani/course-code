@@ -1,0 +1,14 @@
+name: simple-action
+on: [ push ]
+
+jobs:
+    simple-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Simple-Action
+              id: Authenticate
+              uses: actions/hello-world-javascript-action@dfcd43880f010c6e09cb97122c17bce684f9d141
+              with:
+                who-to-greet: Dharani
+            - name: Output
+              run: echo "${{steps.Authenticate.outputs.time}}"
