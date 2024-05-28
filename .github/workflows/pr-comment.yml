@@ -1,0 +1,21 @@
+name: Pull Requset Comment
+on:
+    pull_request_target:
+        type: [opened]
+
+jobs:
+    pr-comment:
+        runs-on: ubuntu
+        steps:
+            - name: Comment a New PR
+              uses: actions/github-script@v6
+              with:
+                Script: |
+                   github.rest.issues.createComment({
+                   owner: context.repo.owner,
+                   repo: context.repo.repo,
+                   issue_number:context.issue.number,
+                   body,;
+                });
+
+              
