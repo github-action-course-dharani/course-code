@@ -2,6 +2,16 @@ name: CheckOut
 on: "push"
 
 jobs:
+    Checkout-using-actions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: list
+              run: ls -a 
+            - name: Using Checkout action
+              uses: actions/checkout@v3
+            - name: After listing
+              run: ls -a
+
     Code-checkout:
         runs-on: ubuntu-latest
         steps:
