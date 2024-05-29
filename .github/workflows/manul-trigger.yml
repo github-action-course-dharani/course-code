@@ -1,6 +1,13 @@
 name: Manual_trigger
 on:
     workflow_dispatch:
+        inputs:
+            string:
+                description: The input is string
+                type: string
+                required: true
+                default: "Default values"
+
 
 jobs:
     manual_trigger:
