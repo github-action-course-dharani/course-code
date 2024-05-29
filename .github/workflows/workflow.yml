@@ -1,0 +1,12 @@
+name: Triggering the workflow
+on:
+    workflow_run:
+        workflows: [ Repository events ]
+        types:
+            [ completed ]
+
+jobs:
+    Running_the_workflow:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "this will be started once the repository events will be completed."
