@@ -7,10 +7,38 @@ on:
                 type: string
                 required: true
                 default: "Default values"
+            number:
+                description: the input is number
+                type: number
+                default: 5
+            option:
+                description: An options input
+                type: choice
+                default: "Option 3"
+                required: true
+                options:
+                    - Option 1
+                    - Option 2 
+                    - Option 3
+            boolean:
+                description: A boolean Option
+                type: boolean
+                required: false
+            environments:
+                description: "Environment"
+                type: environment
+                required: true 
+
 
 
 jobs:
     manual_trigger:
         runs-on: ubuntu-latest
         steps:
-            - run: echo $GITHUB_REF
+            - run: |
+                echo $GITHUB_REF
+                echo "String ${{inputs.string}}"
+                echo "Number ${{inputs.number}}"
+                echo "Option ${{inputs.option}}"
+                echo "boolean ${{inputs.boolean}}"
+                echo "boolean ${{inputs.environments}}"
